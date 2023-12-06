@@ -8,5 +8,4 @@ USER_ID="5339665987"
 MESSAGE="hi its began"
 
 API_ENDPOINT="https://api.telegram.org/bot$BOT_TOKEN/sendMessage"
-
-curl -X POST -H "Authorization: Bearer $BOT_TOKEN" -H "Content-Type: application/json" -d "{\"user_id\": \"$USER_ID\", \"message\": \"$MESSAGE\"}" $API_ENDPOINT
+curl -s -X POST $API_ENDPOINT -d "chat_id=$CHAT_ID" -d "text=$MESSAGE"
